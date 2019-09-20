@@ -1,1 +1,10 @@
 pip install https://github.com/Cytomine-ULiege/Cytomine-python-client/archive/master.zip
+
+git clone https://github.com/Neubias-WG5/neubiaswg5-utilities.git
+cd neubiaswg5-utilities
+pip install .
+
+# manually place binaries in path (required for using neubiaswg5.metrics subpackage)
+chmod +x bin/*
+cp bin/* /usr/bin/
+cd ..
