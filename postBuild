@@ -11,7 +11,3 @@ chmod +x bin/*
 export PATH=$PATH:$(pwd)/bin/
 cd ..
 
-# Install Java
-apt-get update && apt-get install openjdk-8-jdk -y && apt-get clean
-
-
