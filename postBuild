@@ -11,5 +11,43 @@ chmod +x bin/*
 export PATH=$PATH:$(pwd)/bin/
 cd ..
 
+# install openjdk
 conda install -y -c bioconda/label/cf201901 java-jdk
 
+# install FIJI
+wget https://downloads.imagej.net/fiji/Life-Line/fiji-linux64-20170530.zip
+unzip fiji-linux64-20170530.zip
+mv Fiji.app/ fiji
+
+# create a sym-link with the name jars/ij.jar that is pointing to the current version jars/ij-1.nm.jar
+cd /fiji/jars && ln -s $(ls ij-1.*.jar) ij.jar
+
+cd ../..
+
+# Add fiji to the PATH
+export PATH=$PATH:/fiji
+
+mkdir -p ./fiji/data
+
+# Clean up
+rm fiji-linux64-20170530.zip
+
+# install FeatureJ
+
+cd ../..
+
+cd ./fiji/plugins && \
+wget -O imagescience.jar \
+https://imagescience.org/meijering/software/download/imagescience.jar
+
+cd ../..
+
+cd ./fiji/plugins && \
+wget -O FeatureJ_.jar \
+https://imagescience.org/meijering/software/download/FeatureJ_.jar
+
+cd ../..
+# install MorphoLibJ
+
+RUN cd ./fiji/plugins && \
+wget https://github.com/ijpb/MorphoLibJ/releases/download/v1.3.6/MorphoLibJ_-1.3.6.jar
