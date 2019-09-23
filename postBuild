@@ -11,5 +11,5 @@ chmod +x bin/*
 export PATH=$PATH:$(pwd)/bin/
 cd ..
 
-!conda install -y -c bioconda/label/cf201901 java-jdk
+conda install -y -c bioconda/label/cf201901 java-jdk
 
