@@ -1,12 +1,17 @@
+# Install Cytomine python client
 pip install https://github.com/Cytomine-ULiege/Cytomine-python-client/archive/master.zip
 
+# Install Neubias-W5-Utilities (annotation exporter, compute metrics, helpers,...)
 git clone https://github.com/Neubias-WG5/neubiaswg5-utilities.git
 cd neubiaswg5-utilities
 pip install .
 
-# manually place binaries in path (required for using neubiaswg5.metrics subpackage) 
+# install utilities binaries
 chmod +x bin/*
 export PATH=$PATH:$(pwd)/bin/
 cd ..
+
+# Install Java
+apt-get update && apt-get install openjdk-8-jdk -y && apt-get clean
 
 
