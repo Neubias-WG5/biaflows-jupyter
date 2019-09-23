@@ -1,1 +1,1 @@
-xvfp
+xvfb
