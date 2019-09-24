@@ -21,8 +21,9 @@ pwd
 ls -alh
 mv ./Fiji.app/ ./fiji
 cd ./fiji/jars && ln -s $(ls ij-1.*.jar) ij.jar
+cd ../..
 
-#export PATH=$PATH:/fiji
+export PATH=$PATH:/fiji
 mkdir -p ./fiji/data
 
 pwd
@@ -31,10 +32,9 @@ ls -alh ./fiji/jars
 
 # install plugins
 cd ./fiji/plugins && wget -O imagescience.jar https://imagescience.org/meijering/software/download/imagescience.jar
-
-cd ./fiji/plugins && wget -O FeatureJ_.jar https://imagescience.org/meijering/software/download/FeatureJ_.jar
-
-cd ./fiji/plugins && wget https://github.com/ijpb/MorphoLibJ/releases/download/v1.3.6/MorphoLibJ_-1.3.6.jar
+wget -O FeatureJ_.jar https://imagescience.org/meijering/software/download/FeatureJ_.jar
+wget https://github.com/ijpb/MorphoLibJ/releases/download/v1.3.6/MorphoLibJ_-1.3.6.jar
+cd ../..
 
 # get the imagej macro
 wget https://github.com/Neubias-WG5/W_NucleiTracking-ImageJ/blob/master/NucleiTracking.ijm
