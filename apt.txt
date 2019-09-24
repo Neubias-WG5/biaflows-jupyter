@@ -1,2 +1,2 @@
 xvfb
-libxtst6:i386
+libxtst6
