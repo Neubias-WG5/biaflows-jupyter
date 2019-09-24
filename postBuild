@@ -17,7 +17,11 @@ conda install -y -c bioconda/label/cf201901 java-jdk
 # install FIJI
 wget https://downloads.imagej.net/fiji/Life-Line/fiji-linux64-20170530.zip
 unzip fiji-linux64-20170530.zip
+pwd
+ls -alh
 mv ./Fiji.app/ ./fiji
+pwd
+ls -alh
 cd ./fiji/jars && ln -s $(ls ij-1.*.jar) ij.jar
 
 export PATH=$PATH:/fiji
