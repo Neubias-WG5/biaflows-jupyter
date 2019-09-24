@@ -21,13 +21,11 @@ pwd
 ls -alh
 mv ./Fiji.app/ ./fiji
 pwd
-ls -alh
+ls -alh ./fiji
 cd ./fiji/jars && ln -s $(ls ij-1.*.jar) ij.jar
 
-export PATH=$PATH:/fiji
+#export PATH=$PATH:/fiji
 mkdir -p ./fiji/data
-chmod a+w ./fiji-linux64-20170530.zip
-rm ./fiji-linux64-20170530.zip
 
 # install plugins
 cd ./fiji/plugins && wget -O imagescience.jar https://imagescience.org/meijering/software/download/imagescience.jar
