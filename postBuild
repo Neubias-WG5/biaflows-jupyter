@@ -1,5 +1,5 @@
 # Install Cytomine python client
-# pip install https://github.com/Cytomine-ULiege/Cytomine-python-client/archive/master.zip
+pip install https://github.com/Cytomine-ULiege/Cytomine-python-client/archive/master.zip
 
 # Install Neubias-W5-Utilities (annotation exporter, compute metrics, helpers,...)
 git clone https://github.com/Neubias-WG5/neubiaswg5-utilities.git
